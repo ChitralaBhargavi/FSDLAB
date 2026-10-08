@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+
+    <header class="topbar">
+      <h1>Weather</h1>
+
+      <form id="search-form" class="search" role="search">
+        <label for="city-input" class="visually-hidden">City name</label>
+        <input id="city-input" type="search" placeholder="Search for a city" autocomplete="off" required>
+        <button type="submit" class="btn">Search</button>
+        <button type="button" id="locate-btn" class="btn btn-ghost">Use my location</button>
+      </form>
+
+      <div class="units" role="group" aria-label="Temperature units">
+        <button type="button" class="unit-btn active" data-units="metric" aria-pressed="true">&deg;C</button>
+        <button type="button" class="unit-btn" data-units="imperial" aria-pressed="false">&deg;F</button>
+      </div>
+    </header>
+
+    <!-- Loading and error messages -->
+    <p id="status" class="status" role="status" aria-live="polite"></p>
+
+    <main id="dashboard" hidden>
+
+      <!-- Current conditions -->
+      <section class="panel current" aria-labelledby="place-name">
+        <div class="current-main">
+          <h2 id="place-name"></h2>
+          <p id="local-time" class="muted"></p>
+          <p class="temp-row">
+            <span id="current-icon" class="big-icon" aria-hidden="true"></span>
+            <span id="current-temp" class="big-temp"></span>
+          </p>
+          <p id="current-desc" class="desc"></p>
+        </div>
+
+        <dl class="details">
+          <div><dt>Feels like</dt><dd id="feels-like"></dd></div>
+          <div><dt>Humidity</dt><dd id="humidity"></dd></div>
+          <div><dt>Wind</dt><dd id="wind"></dd></div>
+          <div><dt>Precipitation</dt><dd id="precip"></dd></div>
+          <div><dt>Sunrise</dt><dd id="sunrise"></dd></div>
+          <div><dt>Sunset</dt><dd id="sunset"></dd></div>
+        </dl>
+      </section>
+
+      <!-- Next 24 hours -->
+      <section class="panel" aria-labelledby="hourly-title">
+        <h2 id="hourly-title" class="section-title">Next 24 hours</h2>
+        <ul id="hourly" class="hourly"></ul>
+      </section>
+
+      <!-- 7-day forecast -->
+      <section class="panel" aria-labelledby="daily-title">
+        <h2 id="daily-title" class="section-title">7-day forecast</h2>
+        <ul id="daily" class="daily"></ul>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      Data from <a href="https://open-meteo.com/" rel="noopener">Open-Meteo</a>. No account or API key needed.
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
