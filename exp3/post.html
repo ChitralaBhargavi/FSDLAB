@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Why your layout should start with a grid – The Field Journal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/blog.css" rel="stylesheet">
+</head>
+<body class="bg-body-tertiary">
+
+  <nav class="navbar navbar-expand-lg bg-body border-bottom sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">The Field Journal</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html#latest">Articles</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+        </ul>
+        <button id="theme-toggle" class="btn btn-outline-secondary btn-sm" type="button" aria-pressed="false">Dark mode</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-9 col-xl-8">
+
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="index.html#latest">Design</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Layout and grids</li>
+          </ol>
+        </nav>
+
+        <article class="card border-0 shadow-sm overflow-hidden">
+          <div class="ratio ratio-21x9 thumb" role="img" aria-label="Article header illustration"></div>
+
+          <div class="card-body p-4 p-md-5">
+            <header class="mb-4">
+              <span class="badge text-bg-secondary mb-3">Design</span>
+              <h1 class="display-5 fw-bold">Why your layout should start with a grid</h1>
+              <div class="d-flex align-items-center gap-3 mt-3">
+                <div class="rounded-circle bg-primary-subtle text-primary-emphasis d-flex align-items-center justify-content-center fw-bold"
+                     style="width:44px;height:44px;" aria-hidden="true">SO</div>
+                <div class="small">
+                  <div class="fw-semibold">Sam Okafor</div>
+                  <div class="text-body-secondary">8 Oct 2026 &middot; 6 min read</div>
+                </div>
+              </div>
+            </header>
+
+            <div class="article-body">
+              <p class="lead">
+                A grid is a set of invisible lines that everything on the page lines up with. It sounds dull, and it is the
+                reason good pages feel calm.
+              </p>
+
+              <p>
+                When every element follows the same columns and spacing, readers spot patterns quickly. Headings, images and
+                text blocks feel related, because they are. You also make fewer decisions, since the grid has already made
+                them for you.
+              </p>
+
+              <h2>Start with columns</h2>
+              <p>
+                Twelve columns divide neatly into halves, thirds and quarters. That is why Bootstrap uses them. On a phone
+                the columns stack, and on a desktop they sit side by side.
+              </p>
+
+              <blockquote class="blockquote border-start border-4 border-primary ps-4 my-4">
+                <p class="mb-1">Good layout is mostly about deciding what lines up with what.</p>
+                <footer class="blockquote-footer">Sam Okafor</footer>
+              </blockquote>
+
+              <h2>Keep spacing consistent</h2>
+              <p>
+                Pick a small set of spacing sizes and reuse them. Bootstrap's spacing utilities, such as <code>mb-3</code>
+                and <code>py-5</code>, make this easy without writing extra CSS.
+              </p>
+
+              <h2>Check on a real phone</h2>
+              <p>
+                Resize your browser, then pick up an actual phone. Line length, tap targets and image sizes all look
+                different in your hand.
+              </p>
+            </div>
+
+            <hr class="my-4">
+
+            <!-- Tags and share -->
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+              <div class="d-flex flex-wrap gap-2">
+                <a href="#" class="badge text-bg-light text-decoration-none">layout</a>
+                <a href="#" class="badge text-bg-light text-decoration-none">grid</a>
+                <a href="#" class="badge text-bg-light text-decoration-none">bootstrap</a>
+              </div>
+              <div class="btn-group btn-group-sm" role="group" aria-label="Share this article">
+                <button type="button" class="btn btn-outline-secondary">Copy link</button>
+                <button type="button" class="btn btn-outline-secondary">Email</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Previous / next -->
+        <nav class="row g-3 mt-4" aria-label="More articles">
+          <div class="col-sm-6">
+            <a href="index.html" class="card post-card text-decoration-none border-0 shadow-sm h-100">
+              <div class="card-body">
+                <div class="small text-body-secondary">Older</div>
+                <div class="fw-semibold">Keyboard testing in ten minutes</div>
+              </div>
+            </a>
+          </div>
+          <div class="col-sm-6">
+            <a href="index.html" class="card post-card text-decoration-none border-0 shadow-sm h-100">
+              <div class="card-body text-sm-end">
+                <div class="small text-body-secondary">Newer</div>
+                <div class="fw-semibold">Back to all articles</div>
+              </div>
+            </a>
+          </div>
+        </nav>
+
+        <!-- Comments form -->
+        <section class="card border-0 shadow-sm mt-4" aria-labelledby="comment-title">
+          <div class="card-body p-4">
+            <h2 id="comment-title" class="h5 mb-3">Leave a comment</h2>
+            <form onsubmit="return false;">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="c-name" class="form-label">Name</label>
+                  <input id="c-name" type="text" class="form-control" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="c-email" class="form-label">Email</label>
+                  <input id="c-email" type="email" class="form-control" required>
+                </div>
+                <div class="col-12">
+                  <label for="c-text" class="form-label">Comment</label>
+                  <textarea id="c-text" class="form-control" rows="4" required></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary">Post comment</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-body border-top py-4">
+    <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
+      <p class="mb-0 text-body-secondary small">&copy; 2026 The Field Journal</p>
+      <ul class="nav small">
+        <li class="nav-item"><a class="nav-link px-2" href="#">Privacy</a></li>
+        <li class="nav-item"><a class="nav-link px-2" href="#">RSS</a></li>
+        <li class="nav-item"><a class="nav-link px-2" href="#">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/blog.js"></script>
+</body>
+</html>

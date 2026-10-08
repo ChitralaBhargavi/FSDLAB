@@ -1,0 +1,23 @@
+/* Small custom touches on top of Bootstrap */
+body { font-family: Georgia, "Times New Roman", serif; }
+h1, h2, h3, h4, h5, h6, .navbar, .btn, .badge, .form-control, .list-group, .breadcrumb, .pagination, .small {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Placeholder "images" so the template works without any picture files */
+.thumb { background: linear-gradient(135deg, var(--bs-primary-bg-subtle), var(--bs-info-bg-subtle)); }
+.thumb--b { background: linear-gradient(135deg, var(--bs-success-bg-subtle), var(--bs-warning-bg-subtle)); }
+.thumb--c { background: linear-gradient(135deg, var(--bs-danger-bg-subtle), var(--bs-warning-bg-subtle)); }
+.thumb--d { background: linear-gradient(135deg, var(--bs-info-bg-subtle), var(--bs-success-bg-subtle)); }
+
+/* Cards: whole card feels clickable, with a lift on hover */
+.post-card { transition: transform .15s ease, box-shadow .15s ease; }
+.post-card:hover { transform: translateY(-3px); box-shadow: var(--bs-box-shadow); }
+@media (prefers-reduced-motion: reduce) { .post-card { transition: none; } .post-card:hover { transform: none; } }
+
+/* Comfortable reading width and spacing for article text */
+.article-body { font-size: 1.15rem; line-height: 1.8; max-width: 42rem; }
+.article-body h2 { margin-top: 2.5rem; font-size: 1.6rem; }
+
+/* Sticky sidebar on large screens only */
+@media (min-width: 992px) { .sidebar { position: sticky; top: 1.5rem; } }
