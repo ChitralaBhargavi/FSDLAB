@@ -1,0 +1,58 @@
+<section class="contact">
+  <h1>Contact us</h1>
+  <p>Send us a message and we'll reply within two days.</p>
+
+  <p *ngIf="sent" class="notice" role="status">Message sent. We'll be in touch soon.</p>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+    <div class="field">
+      <label for="name">Name</label>
+      <input id="name" type="text" formControlName="name" [attr.aria-invalid]="showError('name')" />
+      <div class="error" *ngIf="showError('name')">
+        <span *ngIf="f['name'].errors?.['required']">Enter your name.</span>
+        <span *ngIf="f['name'].errors?.['minlength']">Name must be at least 2 characters.</span>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="email">Email</label>
+      <input id="email" type="email" formControlName="email" [attr.aria-invalid]="showError('email')" />
+      <div class="error" *ngIf="showError('email')">
+        <span *ngIf="f['email'].errors?.['required']">Enter your email address.</span>
+        <span *ngIf="f['email'].errors?.['email']">Enter a valid email address.</span>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="subject">Subject</label>
+      <select id="subject" formControlName="subject" [attr.aria-invalid]="showError('subject')">
+        <option value="" disabled>Choose a subject</option>
+        <option value="question">General question</option>
+        <option value="support">Support</option>
+        <option value="feedback">Feedback</option>
+      </select>
+      <div class="error" *ngIf="showError('subject')">Choose a subject.</div>
+    </div>
+
+    <div class="field">
+      <label for="message">Message</label>
+      <textarea id="message" rows="5" formControlName="message" [attr.aria-invalid]="showError('message')"></textarea>
+      <div class="hint">{{ f['message'].value?.length || 0 }} / 500</div>
+      <div class="error" *ngIf="showError('message')">
+        <span *ngIf="f['message'].errors?.['required']">Enter a message.</span>
+        <span *ngIf="f['message'].errors?.['minlength']">Message must be at least 10 characters.</span>
+        <span *ngIf="f['message'].errors?.['maxlength']">Message can't be longer than 500 characters.</span>
+      </div>
+    </div>
+
+    <div class="field check">
+      <label>
+        <input type="checkbox" formControlName="consent" />
+        I agree to be contacted about this message.
+      </label>
+      <div class="error" *ngIf="showError('consent')">You need to agree before sending.</div>
+    </div>
+
+    <button type="submit">Send message</button>
+  </form>
+</section>

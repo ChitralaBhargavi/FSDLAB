@@ -1,0 +1,15 @@
+.contact { max-width: 34rem; margin: 3rem auto; padding: 0 1rem; font-family: system-ui, sans-serif; color: #1b2430; }
+h1 { margin: 0 0 .5rem; }
+.field { display: flex; flex-direction: column; gap: .35rem; margin-bottom: 1.25rem; }
+label { font-weight: 600; }
+input[type='text'], input[type='email'], select, textarea {
+  font: inherit; padding: .65rem .8rem; border: 2px solid #b9c2c9; border-radius: 6px; background: #fff;
+}
+[aria-invalid='true'] { border-color: #b3261e; }
+:focus-visible { outline: 3px solid #2b3f8c; outline-offset: 2px; }
+.check label { display: flex; gap: .5rem; align-items: center; font-weight: 400; }
+.error { color: #b3261e; font-size: .9rem; }
+.hint { color: #5b6672; font-size: .85rem; text-align: right; }
+.notice { background: #cfe0d4; padding: .75rem 1rem; border-radius: 6px; }
+button { font: inherit; font-weight: 600; padding: .7rem 1.4rem; border: 0; border-radius: 6px; background: #2b3f8c; color: #fff; cursor: pointer; }
+button:hover { filter: brightness(1.1); }
