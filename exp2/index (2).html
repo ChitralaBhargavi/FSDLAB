@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+
+    <!-- Start screen -->
+    <section id="start-screen">
+      <h1>JavaScript Quiz</h1>
+      <p>5 questions. You get 15 seconds for each one.</p>
+      <p>Correct answer: 10 points, plus 1 point for every second left.</p>
+      <p id="best-score"></p>
+      <button id="start-btn" class="btn">Start quiz</button>
+    </section>
+
+    <!-- Quiz screen -->
+    <section id="quiz-screen" hidden>
+      <div class="top-bar">
+        <span id="progress">Question 1 of 5</span>
+        <span id="score">Score: 0</span>
+        <span id="timer">15s</span>
+      </div>
+      <div class="timer-track"><div id="timer-fill"></div></div>
+
+      <h2 id="question"></h2>
+      <div id="options"></div>
+
+      <button id="next-btn" class="btn" hidden>Next question</button>
+    </section>
+
+    <!-- Result screen -->
+    <section id="result-screen" hidden>
+      <h1>Quiz finished</h1>
+      <p id="final-score"></p>
+      <p id="summary"></p>
+      <button id="restart-btn" class="btn">Play again</button>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
