@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tasty Bites Restaurant</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, sans-serif; color: #222; line-height: 1.6; }
+    header { background: #c0392b; color: white; text-align: center; padding: 50px 20px; }
+    nav { background: #222; text-align: center; padding: 10px; }
+    nav a { color: white; margin: 0 12px; text-decoration: none; }
+    section { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { color: #c0392b; border-bottom: 2px solid #c0392b; padding-bottom: 5px; }
+    .menu { display: flex; gap: 15px; flex-wrap: wrap; }
+    .item { flex: 1; min-width: 200px; border: 1px solid #ccc; border-radius: 6px; padding: 15px; }
+    .price { color: #c0392b; font-weight: bold; }
+    footer { background: #222; color: white; text-align: center; padding: 15px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tasty Bites</h1>
+    <p>Fresh food, made with love</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#menu">Menu</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We are a family restaurant serving tasty meals since 2010. Come hungry, leave happy!</p>
+  </section>
+
+  <section id="menu">
+    <h2>Our Menu</h2>
+    <div class="menu">
+      <div class="item"><h3>Veg Burger</h3><p>Crispy patty with fresh veggies.</p><p class="price">$5</p></div>
+      <div class="item"><h3>Margherita Pizza</h3><p>Cheese, tomato and basil.</p><p class="price">$8</p></div>
+      <div class="item"><h3>Pasta</h3><p>Creamy white sauce pasta.</p><p class="price">$7</p></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact &amp; Hours</h2>
+    <p>Open daily: 10 AM to 10 PM</p>
+    <p>Phone: 123-456-7890</p>
+    <p>Address: 12 Main Street</p>
+  </section>
+
+  <footer>&copy; 2026 Tasty Bites</footer>
+</body>
+</html>

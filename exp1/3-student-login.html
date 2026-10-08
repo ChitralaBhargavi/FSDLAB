@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Login</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, sans-serif; background: #eef1f6; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+    .box { background: white; padding: 30px; width: 90%; max-width: 340px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.15); }
+    h2 { text-align: center; margin-top: 0; }
+    label { display: block; margin-top: 12px; }
+    input { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #aaa; border-radius: 4px; }
+    button { width: 100%; padding: 10px; margin-top: 18px; background: #2b44ff; color: white; border: 0; border-radius: 4px; font-size: 16px; cursor: pointer; }
+    #message { text-align: center; margin-top: 15px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>Student Login</h2>
+    <form id="loginForm">
+      <label for="id">Student ID</label>
+      <input type="text" id="id" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" required>
+
+      <button type="submit">Login</button>
+    </form>
+    <p id="message"></p>
+  </div>
+
+  <script>
+    // Demo only: real sites check the password on a server, never in JavaScript.
+    document.getElementById("loginForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      var id = document.getElementById("id").value;
+      var pass = document.getElementById("password").value;
+      var msg = document.getElementById("message");
+
+      if (id === "student123" && pass === "1234") {
+        msg.style.color = "green";
+        msg.textContent = "Login successful! Welcome, " + id;
+      } else {
+        msg.style.color = "red";
+        msg.textContent = "Wrong ID or password. Try again.";
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Portfolio</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, sans-serif; color: #222; line-height: 1.6; }
+    header { background: #2b44ff; color: white; padding: 40px 20px; text-align: center; }
+    nav { background: #222; text-align: center; padding: 10px; }
+    nav a { color: white; margin: 0 12px; text-decoration: none; }
+    section { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-bottom: 2px solid #2b44ff; padding-bottom: 5px; }
+    .projects { display: flex; gap: 15px; flex-wrap: wrap; }
+    .project { flex: 1; min-width: 200px; border: 1px solid #ccc; padding: 15px; border-radius: 6px; }
+    footer { background: #222; color: white; text-align: center; padding: 15px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Your Name</h1>
+    <p>Web Developer</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hi! I am a student who loves building websites. I know HTML, CSS and a little JavaScript.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project"><h3>Project One</h3><p>A simple website.</p></div>
+      <div class="project"><h3>Project Two</h3><p>A to-do list app.</p></div>
+      <div class="project"><h3>Project Three</h3><p>A calculator.</p></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: yourname@example.com</p>
+  </section>
+
+  <footer>&copy; 2026 Your Name</footer>
+</body>
+</html>
